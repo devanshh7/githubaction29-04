@@ -19,5 +19,5 @@
           with:
             python-version: '3.12'
 
-          - name: Run debt.py
-            run: python debt.py
+        - name: Run debt.py
+          run: python debt.py
