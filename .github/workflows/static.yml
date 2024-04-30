@@ -1,23 +1,23 @@
   name: Python Script Workflow
 
-  on:
-    push:
-      branches:
-        - main
+on:
+  push:
+    branches:
+      - main
 
-  jobs:
-    run_pyhton_script:
-      name: Run hello.py
-      run-on: ubuntu-latest
+jobs:
+  run_python_script:
+    name: Run hello.py
+    runs-on: ubuntu-latest
 
-      steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+      
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.12'
 
-        - name: Set up Python
-          uses: actions/setup-python@v2
-          with:
-            python-version: '3.12'
-
-        - name: Run debt.py
-          run: python debt.py
+     - name: Run debt.py 2
+      run: python debt.py
